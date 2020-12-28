@@ -1,6 +1,8 @@
 package io.javabrains;
 
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.condition.EnabledOnOs;
+import org.junit.jupiter.api.condition.OS;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -34,12 +36,12 @@ class MathUtilsTest {
     }
 
     @Test
-
     void testDivide(){
         assertThrows(ArithmeticException.class, ()-> mathUtils.divide(1,0), "divide by zero should throw");
     }
 
     @Test
+    @EnabledOnOs(OS.LINUX)
     void testComputerCircleRadius(){
         assertEquals(314.1592653589793,mathUtils.computeCircleArea(100), "should return right circle area");
     }
