@@ -43,4 +43,11 @@ class MathUtilsTest {
     void testComputerCircleRadius(){
         assertEquals(314.1592653589793,mathUtils.computeCircleArea(100), "should return right circle area");
     }
+
+    @Test
+    @Disabled
+    @DisplayName("TDD Should not run")
+    void testDisabled(){
+        fail("This test should be failed");
+    }
 }
