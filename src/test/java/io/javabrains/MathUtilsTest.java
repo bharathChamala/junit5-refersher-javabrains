@@ -1,9 +1,6 @@
 package io.javabrains;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -28,6 +25,7 @@ class MathUtilsTest {
     }
 
     @Test
+    @DisplayName("Testing Add Method")
     void testAdd() {
 
         int expected = 2;
